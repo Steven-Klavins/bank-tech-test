@@ -2,7 +2,7 @@
 
 function Bank() {
     this.balance = 0
-    this.date = Date().toString;
+    this.date = new Date
 }
 
 Bank.prototype.deposit = function (val) {
@@ -14,8 +14,14 @@ Bank.prototype.withdraw = function (val) {
         this.balance -= val
   }
   else {
-    return ("Your balance is currently only ${this.balence}")
+    console.log("Your balance is currently only " + this.balance)
   }
+}
+
+Bank.prototype.showTransactions = function () {
+    var formatDate = this.date.getDate()+'/'+ (this.date.getMonth()+1)+'/'+this.date.getFullYear();
+    console.log ("date || credit || debit || balance \n "+ formatDate + " || || 100.00 || 100.00")
+    return "date || credit || debit || balance \n "+ formatDate + " || || 100.00 || 100.00"
 }
 
 
