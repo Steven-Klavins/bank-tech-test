@@ -9,6 +9,15 @@ Bank.prototype.deposit = function (val) {
  this.balance += val
 }
 
+Bank.prototype.withdraw = function (val) {
+  if (val <= this.balance) {
+        this.balance -= val
+  }
+  else {
+    return ("Your balance is currently only ${this.balence}")
+  }
+}
+
 
 
 
