@@ -19,11 +19,17 @@ Bank.prototype.withdraw = function (val) {
 }
 
 Bank.prototype.showTransactions = function () {
-    var formatDate = this.date.getDate()+'/'+ (this.date.getMonth()+1)+'/'+this.date.getFullYear();
+    var formatDate = this.format()
     console.log ("date || credit || debit || balance \n "+ formatDate + " || || 100.00 || 100.00")
     return "date || credit || debit || balance \n "+ formatDate + " || || 100.00 || 100.00"
 }
 
+Bank.prototype.format = function (){
+    var formattedDate = ('0' + this.date.getDate()).slice(-2) + '/'
+    + ('0' + (this.date.getMonth()+1)).slice(-2) + '/'
+    + this.date.getFullYear();
+    return formattedDate
+}
 
 
 
