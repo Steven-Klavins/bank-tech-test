@@ -32,7 +32,7 @@ describe('User can make a deposite and withdraw money ', function() {
 
   it('It creates a new instance of the bank function', function() {
     bank.deposit(100)
-    expect(bank.showTransactions()).toEqual("date || credit || debit || balance \n "+ "19/5/2020" + " || || 100.00 || 100.00")
+    expect(bank.showTransactions()).toEqual("date || credit || debit || balance \n "+ "19/05/2020" + " || || 100.00 || 100.00")
 });
 });
 
