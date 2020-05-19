@@ -22,10 +22,17 @@ Account.prototype.withdraw = function (val) {
 }
 
 Account.prototype.showTransactions = function () {
-    var formatDate = this.format()
-    var num = this.balance.toFixed(2)
-    console.log ("date || credit || debit || balance \n "+ formatDate + " || 100.00 || 100.00")
-    return "date || credit || debit || balance \n "+ this.listOfTransactions[0]
+    
+    
+    for (const value of this.listOfTransactions) {
+        var flag = true 
+        if (flag){
+            console.log("date || credit || debit || balance \n ")
+            flag = false
+        }
+        console.log(value);
+      }
+    
 }
 
 Account.prototype.format = function (){

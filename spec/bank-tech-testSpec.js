@@ -36,18 +36,22 @@ describe('User can make a deposite and withdraw money ', function() {
 describe('User can see all their transactions', function() {
 
   it('Shows one transaction', function() {
+    spyOn(console, 'log');
     account.deposit(100.00)
-    expect(account.showTransactions()).toEqual("date || credit || debit || balance \n "+ "19/05/2020" + " || 100.00 || 100.00")
+    account.showTransactions()
+    expect(console.log).toHaveBeenCalledWith("date || credit || debit || balance \n ")
+    expect(console.log).toHaveBeenCalledWith("19/05/2020" + " || 100.00 || 100.00")
   });
 
-  it('adds a transaction in the correct format to the array', function(){
-    account.deposit(100.00)
-  });
 
   it('Shows multiple transactions', function() {
+    spyOn(console, 'log');
     account.deposit(100.00)
     account.withdraw(27.30)
-    expect(account.showTransactions()).toEqual("date || credit || debit || balance \n"+ "19/05/2020" + " || 100.00 || 100.00\n" + "19/05/2020" + " || 27.30 || 72.70\n")
+    account.showTransactions()
+    expect(console.log).toHaveBeenCalledWith("date || credit || debit || balance \n ")
+    expect(console.log).toHaveBeenCalledWith("19/05/2020" + " || 100.00 || 100.00")
+    expect(console.log).toHaveBeenCalledWith("19/05/2020" + " || 27.30 || 72.70")
   });
 
 });
