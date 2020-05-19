@@ -29,10 +29,11 @@ describe('User can make a deposite and withdraw money ', function() {
     bank.withdraw(1000)
     expect(bank.balance === 100);
   });
+
+  it('It creates a new instance of the bank function', function() {
+    bank.deposit(100)
+    expect(bank.showTransactions()).toEqual("date || credit || debit || balance \n "+ "19/5/2020" + " || || 100.00 || 100.00")
+});
 });
 
-
-describe('User can withdraw money providing they dont request more than their balence', function() {
- 
-});
 
