@@ -1,7 +1,7 @@
 # bank-tech-test
 
 **This week at Makers we needed to build a simple banking account app**
-We were informed we did not need to link the app to a database or implement a command line interface that takes input from STDIN. 
+We were informed we did not need to link the app to a database or implement a command-line interface that takes input from STDIN. 
 
 **The user story was as follows**
 
@@ -17,21 +17,36 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 **How to run**
-1) In order to run the application first glone the repo
+1) In order to run the application first clone the repo
 
 ``` git clone git@github.com:Steven-Klavins/bank-tech-test.git ```
 
 2) Following this navigate to the **SpecRunner.htmlSpecRunner.html** and open it in Chrome,
-open Chromes consol. The chorme console can be acessed by right clicking or the page, and selecting inspect,
+open Chromes consol. The Chorme console can be accessed by right-clicking on the page, and selecting inspect,
 following this a consol tab will be available 
 
-3) Thats it, your good to go!
+3) That's it, your good to go!
 
 **Here is the app in use**
 ![](images/Screenshot.png)
 
 **The Commands**
 
+**new Account()** 
+
 ``` account new Account() ```
 
-Creates a new instance of a users account, you can name can talor this to your desired name (steven new Account())
+
+Creates a new instance of a users account, you can name can tailor this to your desired name (steven new Account()). The account will created with a balence of '0' and the date by default is set to 20/05/2020, you can set this to upate automatically by removing the sting from the date field. I have left a note in the code next to this field, you can find this in the file directory ***src/bank-tech-test.js***
+
+For the purposes of this walkthrough im using the account name 'account'
+
+**account.withdraw**
+
+``` account.withdraw() ```
+
+You can use the withdraw method in order to withdraw money from the account, however you will recieve an error specifying there not suffient funds. Enter the value to withdraw in the following format (account.withdraw(10)), this will withdraw 10.00 dollars/pounds/rupees, no specific currency is specifide 
+
+``` account.withdraw() ```
+
+
