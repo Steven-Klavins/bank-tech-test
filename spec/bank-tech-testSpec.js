@@ -6,8 +6,8 @@ beforeEach(function () {
   account = new Account();
 });
 
-describe("Check Jasmine is working", function () {
-  it("It creates a new instance of the account function", function () {
+describe("Checks to see Jasmine is working", function () {
+  it("It creates a new instance of the account", function () {
     expect(account).toEqual(account);
   });
 });
@@ -30,6 +30,12 @@ describe("User can make a deposite and withdraw money ", function () {
   });
 });
 
+describe("The date is converted to the correct format", function () {
+  it("Shows the date correctly formatted", function () {
+    expect(account.format === "20/05/2020");
+  });
+});
+
 describe("User can see all their transactions", function () {
   it("Shows one transaction", function () {
     spyOn(console, "log");
@@ -39,7 +45,7 @@ describe("User can see all their transactions", function () {
       "date || credit || debit || balance \n "
     );
     expect(console.log).toHaveBeenCalledWith(
-      "19/05/2020" + " || 100.00 || 100.00"
+      "20/05/2020" + " || 100.00 || 100.00"
     );
   });
 
@@ -52,10 +58,10 @@ describe("User can see all their transactions", function () {
       "date || credit || debit || balance \n "
     );
     expect(console.log).toHaveBeenCalledWith(
-      "19/05/2020" + " || 100.00 || 100.00"
+      "20/05/2020" + " || 100.00 || 100.00"
     );
     expect(console.log).toHaveBeenCalledWith(
-      "19/05/2020" + " || 27.30 || 72.70"
+      "20/05/2020" + " || 27.30 || 72.70"
     );
   });
 });
