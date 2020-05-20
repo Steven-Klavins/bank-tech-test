@@ -48,3 +48,14 @@ Account.prototype.addTransaction = function (amount) {
     nDate + " || " + amount.toFixed(2) + " || " + this.balance.toFixed(2);
   this.listOfTransactions.push(str);
 };
+
+Account.prototype.printMenu = function () {
+  console.log(
+    "Choose an action\n" +
+      "Enter 1 to view transactions\n" +
+      "Enter 2 to make deposite\n" +
+      "Enter 3 to withdraw money\n" +
+      "Enter 4 to view balance\n" +
+      "Enter 5 to show menu again\n"
+  );
+};
