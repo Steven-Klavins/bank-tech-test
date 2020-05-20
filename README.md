@@ -6,6 +6,8 @@
 **When** she prints her bank statement  
 **Then** she would see
 
+**This week at makers we had to build a simple banking app**
+
 ```
 date || credit || debit || balance
 14/01/2012 || || 500.00 || 2500.00
