@@ -64,19 +64,4 @@ describe("User can see all their transactions", function () {
       "20/05/2020" + " || 27.30 || 72.70"
     );
   });
-
-  describe("User can view an interactive menu", function () {
-    it("Provides user with menue options", function () {
-      spyOn(console, "log");
-      account.printMenu();
-      expect(console.log).toHaveBeenCalledWith(
-        "Choose an action\n" +
-          "Enter 1 to view transactions\n" +
-          "Enter 2 to make deposite\n" +
-          "Enter 3 to withdraw money\n" +
-          "Enter 4 to view balance\n" +
-          "Enter 5 to show menu again\n"
-      );
-    });
-  });
 });
