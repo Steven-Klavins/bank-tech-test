@@ -1,17 +1,11 @@
 "use strict";
 
-var account;
+let account;
 
 beforeEach(function () {
   account = new Account();
   let today = Date("2020-05-20");
   jasmine.clock().mockDate(today);
-});
-
-describe("Checks to see Jasmine is working", () => {
-  it("It creates a new instance of the account", () => {
-    expect(account).toEqual(account);
-  });
 });
 
 describe("User can make a deposit and withdraw money ", () => {
