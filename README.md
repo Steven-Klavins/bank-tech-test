@@ -1,9 +1,9 @@
 # bank-tech-test
 
-**This week at Makers we needed to build a simple bank account app**
-We were informed we did not need to link the app to a database or implement a command-line interface that takes input from STDIN. 
+**This week at Makers we were asked to build a simple bank account application**
+The requirments of the project specifide we did not need to link the app to a database, nor did we need to implement a command-line interface. Despite not having these things I feel they could easily be implimented in future if needed as this is a rather small project and it has minimal dependancies.
 
-**The user story was as follows**
+**The user story we were provided was as follows**
 
 **Given** a client makes a deposit of 1000 on 10-01-2012  
 **And** a deposit of 2000 on 13-01-2012  
@@ -21,9 +21,9 @@ date || credit || debit || balance
 
 ``` git clone git@github.com:Steven-Klavins/bank-tech-test.git ```
 
-2) Following this navigate to the **SpecRunner.htmlSpecRunner.html** and open it in Chrome,
-open Chromes consol. The Chrome console can be accessed by right-clicking on the page, and selecting inspect,
-following this a consol tab will be available. 
+2) Following this navigate to the **SpecRunner.html** and open it in Chrome,
+open Chromes console. The Chrome console can be accessed by right-clicking on the page, and selecting inspect,
+following this a console tab will be available. 
 
 3) That's it, your good to go!
 
@@ -51,7 +51,7 @@ You can use the withdraw method in order to withdraw money from the account, how
 
 ``` account.deposit() ```
 
-This feature runs in the exact same manner as withdraw however, as you could most likely guess it adds money to the account apose to subtracting it. 
+This feature runs in the exact same manner as withdraw however, as you could most likely guess it adds money to the account  as opposed to subtracting it. 
 
 **account.showTransactions**
 
@@ -61,6 +61,6 @@ Running this command will log a table to your console showing all transactions t
 
 **About**
 
-This project was created using Javascript and the Jasmine standalone testing framework and was designed leading with TDD principles. Throughout this project piece by piece I refactored the code in order to make my tests pass, I tried my best to ensure no piece of code was dependent on another. The only scenarios where code is coupled is formatting purposes which I believe to be a suitable design choice
+This project was created using Javascript and the Jasmine standalone testing framework and was designed leading with TDD principles. Throughout this project piece by piece I refactored the code in order to make my tests pass, I tried my best to ensure no piece of code was dependent on another. The only scenarios where code is coupled is the formatting methods which I believe to be a suitable design choice
 
 
