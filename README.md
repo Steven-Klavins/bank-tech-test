@@ -22,7 +22,7 @@ date || credit || debit || balance
 ``` git clone git@github.com:Steven-Klavins/bank-tech-test.git ```
 
 2) Following this navigate to the **SpecRunner.htmlSpecRunner.html** and open it in Chrome,
-open Chromes consol. The Chorme console can be accessed by right-clicking on the page, and selecting inspect,
+open Chromes consol. The Chrome console can be accessed by right-clicking on the page, and selecting inspect,
 following this a consol tab will be available. 
 
 3) That's it, your good to go!
@@ -37,7 +37,7 @@ following this a consol tab will be available.
 ``` account new Account() ```
 
 
-Creates a new instance of a users account, you can tailor this to your desired name (steven new Account()). The account will created with a balence of '0' and the date by default is set to 20/05/2020, you can set this to upate automatically by removing the sting from the date field. I have left a note in the code next to this field, you can find this in the file directory ***src/bank-tech-test.js***
+Creates a new instance of a users account, you can tailor this to your desired name (steven new Account()). The account will created with a balence of '0' and the date by default is set to 20/05/2020, you can set this to upate automatically by removing the string from the date field. I have left a note in the code next to this field, you can find this in the file directory ***src/bank-tech-test.js***
 
 For the purposes of this walkthrough im using the account name 'account'
 
@@ -45,7 +45,7 @@ For the purposes of this walkthrough im using the account name 'account'
 
 ``` account.withdraw() ```
 
-You can use the withdraw method in order to withdraw money from the account, however, you will receive an error specifying there not sufficient funds. Enter the value to withdraw in the following format (account.withdraw(10)), this will withdraw 10.00 dollars/pounds/rupees, no specific currency is specified.
+You can use the withdraw method in order to withdraw money from the account, however, you will receive an error specifying there are not sufficient funds if you havent yet made a deposit. Enter the value to withdraw in the following format (account.withdraw(10)), this will withdraw 10.00 dollars/pounds/rupees, no specific currency is specified.
 
 **account.deposit**
 
@@ -58,3 +58,9 @@ This feature runs in the exact same manner as withdraw however, as you could mos
 ``` account.showTransactions() ```
 
 Running this command will log a table to your console showing all transactions that have been made in the duration of your session, as this program does not have a database keep in mind they won't be preserved if you start a new session.  
+
+**About**
+
+This project was created using Javascript and the Jasmine standalone testing framework and was designed leading with TDD principles. Throughout this project piece by piece I refactored the code in order to make my tests pass, I tried my best to ensure no piece of code was dependent on another. The only scenarios where code is coupled is formatting purposes which I believe to be a suitable design choice
+
+
