@@ -54,8 +54,8 @@ Account.prototype.format = function () {
 };
 
 Account.prototype.addTransaction = function (amount) {
-  var nDate = this.format();
-  var str =
+  let nDate = this.format();
+  let str =
     nDate + " || " + amount.toFixed(2) + " || " + this.balance.toFixed(2);
   this.transactionsList.push(str);
 };
