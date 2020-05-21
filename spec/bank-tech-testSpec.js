@@ -4,40 +4,42 @@ var account;
 
 beforeEach(function () {
   account = new Account();
+  let today = Date("2020-05-20");
+  jasmine.clock().mockDate(today);
 });
 
-describe("Checks to see Jasmine is working", function () {
-  it("It creates a new instance of the account", function () {
+describe("Checks to see Jasmine is working", () => {
+  it("It creates a new instance of the account", () => {
     expect(account).toEqual(account);
   });
 });
 
-describe("User can make a deposite and withdraw money ", function () {
+describe("User can make a deposit and withdraw money ", () => {
   it("User adds 100", function () {
     account.deposit(100);
     expect(account.balance).toEqual(100.0);
   });
 
-  it("User adds 100", function () {
+  it("User adds 100", () => {
     account.deposit(100);
     account.withdraw(60);
     expect(account.balance).toEqual(40.0);
   });
-  it("User adds 100", function () {
+  it("User adds 100", () => {
     account.deposit(100.0);
     account.withdraw(1000.0);
     expect(account.balance === 100.0);
   });
 });
 
-describe("The date is converted to the correct format", function () {
-  it("Shows the date correctly formatted", function () {
+describe("The date is converted to the correct format", () => {
+  it("Shows the date correctly formatted", () => {
     expect(account.format === "20/05/2020");
   });
 });
 
-describe("User can see all their transactions", function () {
-  it("Shows one transaction", function () {
+describe("User can see all their transactions", () => {
+  it("Shows one transaction", () => {
     spyOn(console, "log");
     account.deposit(100.0);
     account.showTransactions();
@@ -49,7 +51,7 @@ describe("User can see all their transactions", function () {
     );
   });
 
-  it("Shows multiple transactions", function () {
+  it("Shows multiple transactions", () => {
     spyOn(console, "log");
     account.deposit(100.0);
     account.withdraw(27.3);

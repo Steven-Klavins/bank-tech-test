@@ -2,7 +2,7 @@
 
 function Account() {
   this.balance = 0;
-  this.date = new Date("2020-05-20"); // Remove date string to enable default of present date (this will however cause test to fail, however the program will still run as exspected)
+  this.date = new Date();
   this.listOfTransactions = [];
 }
 
