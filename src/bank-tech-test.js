@@ -9,14 +9,22 @@ function Account() {
 Account.prototype.deposit = function (val) {
   this.balance += val;
   this.addTransaction(val);
+  console.log(
+    "Deposit complete, your balance is now " + this.balance.toFixed(2)
+  );
 };
 
 Account.prototype.withdraw = function (val) {
   if (val <= this.balance) {
     this.balance -= val;
     this.addTransaction(val);
+    console.log(
+      "Withdrawal complete, your balance is now " + this.balance.toFixed(2)
+    );
   } else {
-    console.log("Your balance is currently only " + this.balance.toFixed(2));
+    console.log(
+      "Unsuccessful, your balance is currently only " + this.balance.toFixed(2)
+    );
   }
 };
 
