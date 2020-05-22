@@ -2,15 +2,15 @@
 
 let account;
 
-beforeEach(function () {
-  var oldDate = new Date("2020-05-20");
-  spyOn(window, "Date").and.callFake(function () {
+beforeEach(() => {
+  let oldDate = new Date("2020-05-20");
+  spyOn(window, "Date").and.callFake(() => {
     return oldDate;
   });
 });
 
 describe("User can make a deposit and withdraw money ", () => {
-  it("User adds 100", function () {
+  it("User adds 100", () => {
     account = new Account();
     account.deposit(100);
     expect(account.balance).toEqual(100);
